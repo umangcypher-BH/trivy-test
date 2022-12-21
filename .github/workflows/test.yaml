@@ -1,4 +1,4 @@
-name: Docker Image Build
+#name: Docker Image Build
 on:
   push:
     branches:
@@ -10,9 +10,9 @@ on:
         description: image tag
         required: true
 jobs:
-  build:
-    uses: umangcypher-BH/shared-workflow-2/.github/workflows/docker-image-build-scan-push-github.yaml@master
-    with:
+  #build:
+    #uses: umangcypher-BH/shared-workflow-2/.github/workflows/docker-image-build-scan-push-github.yaml@master
+   # with:
       # Container Image Name // update it as per project name.
       image_name: "trivy-test"
       # Repo Name
@@ -25,4 +25,4 @@ jobs:
       image_tag: ${{ github.event.inputs.tag }}
       # GH Username 
       username: 'umangcypher-BH'
-    secrets: inherit
+   # secrets: inherit
